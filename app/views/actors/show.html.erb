@@ -1,0 +1,6 @@
+<%=@actor.name%><br><br>
+Age: <%=@actor.age%><br><br>
+Movies:<br>
+<%@actor.movies.each do |movie|%>
+  <%=movie.name%><br>
+<%end%>
