@@ -5,12 +5,12 @@ Genre: <%= @movie.genre%><br><br>
 
 Actors:<br>
 <%@movie.actors_by_age.each do |actor|%>
-  <%=actor.name%>
-  <%=actor.age%>
+  <%= link_to "#{actor.name}", "/actors/#{actor.id}"%>
+  <%=actor.age%><br>
 <%end%><br><br><br><br>
 
 Average Age of Actors:
-<%=@movie.average_age_of_actors%><br><br><br><br>
+<%=@movie.average_age_of_actors.round(2)%><br><br><br><br>
 
 See a missing actor in the list above? Please add them!<br>
 

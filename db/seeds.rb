@@ -18,7 +18,15 @@ movie5 = Movie.create!(name: "Teenagers Go On Campout", creation_year: "2009", g
 movie6 = Movie.create!(name: "Home Alone 2", creation_year: "2019", genre: "Horror", studio: studio3)
 
 actor1 = Actor.create!(name: 'Melissa McCurry', age: 45)
+actor2 = Actor.create!(name: 'John Doe', age: 28)
+actor3 = Actor.create!(name: 'Sara Johnson', age: 14)
 
 movie1.actors << actor1
 movie3.actors << actor1
 movie5.actors << actor1
+
+movie2.actors << actor2
+movie4.actors << actor2
+movie6.actors << actor2
+
+movie1.actors << actor3
