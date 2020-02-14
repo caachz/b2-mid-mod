@@ -15,7 +15,7 @@ RSpec.describe "movies" do
     movie1.actors << actor3
 
 
-    visit "movies/"
+    visit "movies/#{movie1.id}"
 
     expect(page).to have_content("Cartoon Movie")
     expect(page).to have_content("2014")
