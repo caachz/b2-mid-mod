@@ -17,10 +17,19 @@ RSpec.describe "movies" do
 
     visit "movies/"
 
-#     As a user,
-# When I visit a movie's show page.
-# I see the movie's name, creation year, and genre,
-# and a list of all its actors from youngest to oldest.
-# And I see the average age of all of the movie's actors
+    expect(page).to have_content("Cartoon Movie")
+    expect(page).to have_content("2014")
+    expect(page).to have_content("Dumb Kids Movies")
+
+    #youngest to oldest
+    expect(page).to have_content("Harry Smith")
+    expect(page).to have_content("14")
+    expect(page).to have_content("John Doe")
+    expect(page).to have_content("34")
+    expect(page).to have_content("Melissa McCurry")
+    expect(page).to have_content("45")
+
+    #average age
+    expect(page).to have_content("31")
   end
 end
