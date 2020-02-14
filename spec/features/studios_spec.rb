@@ -7,12 +7,12 @@ RSpec.describe "Visitors can interact with studios" do
     studio2 = Studio.create!(name: "Okay Movies Studio")
     studio3 = Studio.create!(name: "Bad Horror Film Studio")
 
-    movie1 = Movie.create!(name: "Cartoon Movie", studios: studio1)
-    movie1 = Movie.create!(name: "Kids Move", studios: studio1)
-    movie1 = Movie.create!(name: "Average Action Thriller", studios: studio2)
-    movie1 = Movie.create!(name: "B Movie", studios: studio2)
-    movie1 = Movie.create!(name: "Teenagers Go On Campout", studios: studio3)
-    movie1 = Movie.create!(name: "Home Alone 2", studios: studio3)
+    movie1 = Movie.create!(name: "Cartoon Movie", studio: studio1)
+    movie1 = Movie.create!(name: "Kids Move", studio: studio1)
+    movie1 = Movie.create!(name: "Average Action Thriller", studio: studio2)
+    movie1 = Movie.create!(name: "B Movie", studio: studio2)
+    movie1 = Movie.create!(name: "Teenagers Go On Campout", studio: studio3)
+    movie1 = Movie.create!(name: "Home Alone 2", studio: studio3)
 
     visit "/studios"
 
