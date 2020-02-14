@@ -7,5 +7,6 @@ class MoviesController < ApplicationController
     movie = Movie.find(params[:id])
     actor = Actor.where(name: params[:name])[0]
     movie.actors << actor
+    redirect_to "/movies/#{movie.id}"
   end
 end

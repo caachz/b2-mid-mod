@@ -43,8 +43,6 @@ RSpec.describe "movies" do
     actor3 = Actor.create!(name: 'John Doe', age: 34)
 
     movie1.actors << actor1
-    movie1.actors << actor2
-    movie1.actors << actor3
 
     visit "/movies/#{movie1.id}"
 
