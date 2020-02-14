@@ -3,4 +3,9 @@ Age: <%=@actor.age%><br><br>
 Movies:<br>
 <%@actor.movies.each do |movie|%>
   <%=movie.name%><br>
+<%end%><br><br><br>
+
+All Actors adn Actresses <%=@actor.name%> has worked with: <br>
+<%@actor.all_actors_worked_with.each do |actor|%>
+  <%=actor.name%><br>
 <%end%>

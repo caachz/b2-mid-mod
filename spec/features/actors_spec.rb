@@ -44,7 +44,7 @@ RSpec.describe "Actors" do
     actor1 = Actor.create!(name: 'Melissa McCurry', age: 45)
     actor2 = Actor.create!(name: 'John Doe', age: 28)
     actor3 = Actor.create!(name: 'Sara Johnson', age: 14)
-    actor3 = Actor.create!(name: 'AJ Hal', age: 56)
+    actor4 = Actor.create!(name: 'AJ Hal', age: 56)
 
     movie1.actors << actor1
     movie3.actors << actor1
@@ -58,6 +58,6 @@ RSpec.describe "Actors" do
 
     expect(page).to have_content("John Doe")
     expect(page).to have_content("Sara Johnson")
-    expect(page).to_no have_content("AJ Hal")
+    expect(page).to_not have_content("AJ Hal")
   end
 end
