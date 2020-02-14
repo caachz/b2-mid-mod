@@ -5,6 +5,7 @@ Genre: <%= @movie.genre%><br><br>
 
 Actors:<br>
 <%@movie.actors_by_age.each do |actor|%>
+<%binding.pry%>
   <%=actor.name%>
   <%=actor.age%>
 <%end%><br><br><br><br>
