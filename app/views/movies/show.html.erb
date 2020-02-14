@@ -5,10 +5,18 @@ Genre: <%= @movie.genre%><br><br>
 
 Actors:<br>
 <%@movie.actors_by_age.each do |actor|%>
-<%binding.pry%>
   <%=actor.name%>
   <%=actor.age%>
 <%end%><br><br><br><br>
 
 Average Age of Actors:
-<%=@movie.average_age_of_actors%>
+<%=@movie.average_age_of_actors%><br><br><br><br>
+
+See a missing actor in the list above? Please add them!<br>
+
+<%= form_tag "/movies/#{@movie.id}", method: :patch do %><br>
+  <%= label_tag :name %><br>
+  <%= text_field_tag :name%><br>
+
+  <%= submit_tag 'Submit' %><br>
+<% end %>

@@ -50,7 +50,7 @@ RSpec.describe "movies" do
 
     expect(page).to have_content("See a missing actor in the list above? Please add them!")
 
-    fill_in "Actors Name", with: "Harry Smith"
+    fill_in "name", with: "Harry Smith"
 
     click_button "Submit"
 
