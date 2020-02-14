@@ -1,11 +1,11 @@
-<%=@actor.name%><br><br>
+<h1><%=@actor.name%></h1><br><br>
 Age: <%=@actor.age%><br><br>
 Movies:<br>
 <%@actor.movies.each do |movie|%>
   <%=movie.name%><br>
 <%end%><br><br><br>
 
-All Actors adn Actresses <%=@actor.name%> has worked with: <br>
+<h2>All Actors and Actresses <%=@actor.name%> has worked with:</h2> <br>
 <%@actor.all_actors_worked_with.each do |actor|%>
   <%=actor.name%><br>
 <%end%>
